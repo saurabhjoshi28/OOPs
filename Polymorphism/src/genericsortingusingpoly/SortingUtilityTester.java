@@ -1,5 +1,10 @@
 package genericsortingusingpoly;
-
+/**
+ * This class demonstrates the use of polymorphism and generic sorting
+ * using different comparator strategies (Ascending, Descending, and Custom).
+ * It tests the SortingUtility class by sorting an array with various comparators.
+ *
+ */
 public class SortingUtilityTester {
     public static void main(String[] args){
 
@@ -19,8 +24,11 @@ public class SortingUtilityTester {
 
         System.out.println();
         /*
-        * This is called as anonymous class
-        * we see that it is better that creating whole other class here*/
+         * --- Sort array based on absolute values ---
+         * Here, we use an anonymous inner class that implements the Comparator interface.
+         * Instead of creating a separate class, we directly define the comparison logic here.
+         * This approach is concise and demonstrates polymorphism with inline comparator definition.
+         */
         SortingUtility.sort(arr, new Comparator() {
             @Override
             public boolean compare(int a, int b) {
